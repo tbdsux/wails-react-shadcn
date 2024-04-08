@@ -1,10 +1,14 @@
+import logo from "@/assets/images/logo-universal.png";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Greet } from "@/wailsjs/go/main/App";
 import { useState } from "react";
-import { Greet } from "../wailsjs/go/main/App";
-import logo from "./assets/images/logo-universal.png";
-import { Button } from "./components/ui/button";
-import { Input } from "./components/ui/input";
 
-function App() {
+export async function rootLoader() {
+  return null;
+}
+
+export default function RootPage() {
   const [resultText, setResultText] = useState(
     "Please enter your name below 👇"
   );
@@ -42,5 +46,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
